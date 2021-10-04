@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+.container{
+	width: 100%;
+	height: calc(100vh-70px);
+}
+
