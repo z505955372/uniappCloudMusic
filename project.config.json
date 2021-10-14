@@ -1,8 +1,8 @@
 {
   "description": "项目配置文件",
-  "miniprogramRoot": "./unpackage/dist/dev/mp-weixin",
+  "miniprogramRoot": "unpackage/dist/dev/mp-weixin/",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": true,
     "enhance": false,
     "postcss": true,
@@ -27,18 +27,19 @@
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
+    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "bundle": false
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "scripts": {},
-  "libVersion": "2.19.6",
+  "libVersion": "2.20.0",
   "projectname": "NMusicPeject",
   "appid": "wx2e2b712361cd9403",
   "condition": {

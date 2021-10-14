@@ -1,65 +1,72 @@
 <template>
-	<view class="music-head">
-		<view  v-if="icon" class="music-head-icon">
-			<text class="iconfont icon-zuosanjiao" @tap="handleToBack"></text>| <text class="iconfont icon-shouye" @tap="handleToHome"></text>
+	<view class="music-head" :style="{color:color}">
+		<view v-if="icon" class="music-head-icon" :class="{'music-head-iconblack':iconblack}">
+			<text class="iconfont icon-zuosanjiao" @tap="handleToBack"></text>| <text class="iconfont icon-shouye"
+				@tap="handleToHome"></text>
 		</view>
-{{title}}
+		{{title}}
 	</view>
 </template>
 
 <script>
 	export default {
-		name:"MusicHead",
+		name: "MusicHead",
 		data() {
 			return {
-				
+
 			};
 		},
-		methods:{
-			handleToBack(){
+		methods: {
+			handleToBack() {
 				//返回到上一页的方法
-					uni.navigateBack({
-						
-					})
-				
+				uni.navigateBack({
+
+				})
+
 			},
-			handleToHome(){
+			handleToHome() {
 				// 返回到主页的方法
 				uni.navigateTo({
-					url:'/pages/index/index'
+					url: '/pages/index/index'
 				});
 			}
-			
+
 		},
-		
-		props:['title','icon']
+
+		props: ['title', 'icon', 'color', 'iconblack']
 	}
 </script>
 
 <style scoped>
-.music-head{
-	width: 100%;
-	height: 75px;
-	font-size: 16px;
-	line-height: 80px;
-	text-align: center;
-	color: black;
-	position: relative;
-	
-}
-.music-head-icon{
-	position: absolute;
-	left: 8px;
-	top: 26px;
-	width: 90px;
-	height: 30px;
-	background-color: rgba(0,0,0,0.4);
-	color: white;
-	line-height: 31px;
-	border-radius: 15px;
-	display: flex;
-	justify-content: space-evenly;
-	
-}
+	.music-head {
+		width: 100%;
+		height: 75px;
+		font-size: 16px;
+		line-height: 80px;
+		text-align: center;
+		color: black;
+		position: relative;
 
+	}
+
+	.music-head-icon {
+		position: absolute;
+		left: 8px;
+		top: 26px;
+		width: 90px;
+		height: 30px;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: white;
+		line-height: 31px;
+		border-radius: 15px;
+		display: flex;
+		justify-content: space-evenly;
+
+	}
+
+	.music-head-iconblack {
+		color: black;
+		border: 1px solid #eaeaea;
+		background: white;
+	}
 </style>

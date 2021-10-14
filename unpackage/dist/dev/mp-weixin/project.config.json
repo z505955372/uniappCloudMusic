@@ -27,8 +27,33 @@
       "list": []
     },
     "miniprogram": {
-      "current": -1,
-      "list": []
+      "current": 0,
+      "list": [
+        {
+          "name": "index",
+          "query": " ",
+          "id": 0,
+          "pathName": "pages/index/index"
+        },
+        {
+          "name": "list",
+          "query": "id=19723756",
+          "id": 1,
+          "pathName": "pages/list/list"
+        },
+        {
+          "name": "detail",
+          "query": "id=1882424351",
+          "id": 2,
+          "pathName": "pages/detail/detail"
+        },
+        {
+          "name": "seach",
+          "query": "",
+          "id": 3,
+          "pathName": "pages/seach/seach"
+        }
+      ]
     }
   }
 }
